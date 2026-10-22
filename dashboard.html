@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Skillora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="week7.css">
+</head>
+<body>
+    <main class="w7-container">
+        <header class="w7-heading">
+            <h1>My Dashboard</h1>
+            <p>Overview of your Skillora marketplace activity.</p>
+            <a href="index.html">Home</a> |
+            <a href="marketplace.html">Marketplace</a> |
+            <a href="favorites.html">My Favorites</a>
+        </header>
+
+        <section class="w7-dashboard-grid">
+            <article class="w7-dashboard-card">
+                <span class="w7-stat-label">Marketplace Services</span>
+                <span class="w7-stat-number" id="w7TotalServices">0</span>
+            </article>
+
+            <article class="w7-dashboard-card">
+                <span class="w7-stat-label">Saved Favorites</span>
+                <span class="w7-stat-number" id="w7TotalFavorites">0</span>
+            </article>
+
+            <article class="w7-dashboard-card">
+                <span class="w7-stat-label">Available Categories</span>
+                <span class="w7-stat-number" id="w7TotalCategories">0</span>
+            </article>
+        </section>
+
+        <section class="w7-filter-panel" style="margin-top: 24px;">
+            <h2>Quick Actions</h2>
+            <p><a href="marketplace.html">Explore services →</a></p>
+            <p><a href="favorites.html">View saved favorites →</a></p>
+            <p><a href="orders.html">Manage my orders →</a></p>
+            <p><a href="messages.html">Open messages →</a></p>
+            <p><a href="reviews.html">View reviews →</a></p>
+        </section>
+    </main>
+
+    <script src="week7.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("w7TotalServices").textContent =
+                typeof week7Services !== "undefined"
+                    ? week7Services.length
+                    : 0;
+
+            let favorites = [];
+
+            try {
+                favorites = JSON.parse(
+                    localStorage.getItem("skilloraWeek7Favorites") || "[]"
+                );
+            } catch {
+                favorites = [];
+            }
+
+            document.getElementById("w7TotalFavorites").textContent =
+                Array.isArray(favorites) ? favorites.length : 0;
+
+            document.getElementById("w7TotalCategories").textContent =
+                new Set(week7Services.map(service => service.category)).size;
+        });
+    </script>
+</body>
+</html>

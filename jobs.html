@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skillora Freelancing Marketplace - Find jobs, post projects and submit proposals.">
+    <title>Find Jobs - Skillora</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Skillora
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="navbar" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Find Freelancers</a>
+                <a href="jobs.html" class="active">Find Jobs</a>
+                <a href="about.html">About</a>
+
+                <div class="nav-actions">
+                    <button class="login-btn" id="loginBtn">Login</button>
+                    <button class="register-btn" id="registerBtn">Register</button>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ==================== JOBS HERO ==================== -->
+    <main>
+
+        <section class="jobs-hero">
+            <div class="container">
+
+                <div class="section-badge">
+                    Explore Opportunities
+                </div>
+
+                <h1>
+                    Find Your Next
+                    <span>Freelance Opportunity</span>
+                </h1>
+
+                <p>
+                    Discover projects that match your skills, experience,
+                    and career goals.
+                </p>
+
+                <!-- Job Search -->
+                <div class="job-search-box">
+
+                    <div class="search-field">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="jobSearch"
+                            placeholder="Search jobs by title, skills or keywords"
+                        >
+                    </div>
+
+                    <div class="category-field">
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <select id="jobCategory">
+                            <option value="all">All Categories</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                            <option value="Data Analysis">Data Analysis</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+
+                    <button class="search-job-btn" id="jobSearchBtn">
+                        Search Jobs
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== JOB MARKETPLACE ==================== -->
+        <section class="jobs-marketplace section-padding">
+            <div class="container">
+
+                <div class="marketplace-header">
+
+                    <div>
+                        <span class="section-label">Job Marketplace</span>
+
+                        <h2>
+                            Explore Available Jobs
+                        </h2>
+
+                        <p>
+                            Browse projects posted by clients and find
+                            opportunities that match your expertise.
+                        </p>
+                    </div>
+
+                    <!-- Sorting -->
+                    <div class="job-sort">
+                        <label for="jobSort">Sort By</label>
+
+                        <select id="jobSort">
+                            <option value="latest">Latest Jobs</option>
+                            <option value="budget-high">Highest Budget</option>
+                            <option value="budget-low">Lowest Budget</option>
+                            <option value="proposals-low">Fewest Proposals</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="jobs-layout">
+
+                    <!-- ==================== FILTER SIDEBAR ==================== -->
+                    <aside class="job-filters">
+
+                        <div class="filter-header">
+                            <h3>Filter Jobs</h3>
+
+                            <button id="clearFilters">
+                                Clear All
+                            </button>
+                        </div>
+
+                        <div class="filter-group">
+
+                            <h4>Category</h4>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="all"
+                                    checked
+                                >
+                                <span>All Categories</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Web Development"
+                                >
+                                <span>Web Development</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Graphic Design"
+                                >
+                                <span>Graphic Design</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Mobile Development"
+                                >
+                                <span>Mobile Development</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Data Analysis"
+                                >
+                                <span>Data Analysis</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="Digital Marketing"
+                                >
+                                <span>Digital Marketing</span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="filter-group">
+
+                            <h4>Budget</h4>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="all"
+                                    checked
+                                >
+                                <span>Any Budget</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="0-100"
+                                >
+                                <span>Under $100</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="100-500"
+                                >
+                                <span>$100 - $500</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="500-1000"
+                                >
+                                <span>$500 - $1,000</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="1000-plus"
+                                >
+                                <span>$1,000+</span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="filter-group">
+
+                            <h4>Project Type</h4>
+
+                            <label class="filter-option">
+                                <input
+                                    type="checkbox"
+                                    value="fixed"
+                                    class="project-type"
+                                >
+                                <span>Fixed Price</span>
+                            </label>
+
+                            <label class="filter-option">
+                                <input
+                                    type="checkbox"
+                                    value="hourly"
+                                    class="project-type"
+                                >
+                                <span>Hourly</span>
+                            </label>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- ==================== JOB LIST ==================== -->
+                    <div class="jobs-content">
+
+                        <div class="jobs-result-header">
+
+                            <p>
+                                Showing
+                                <strong id="jobCount">6</strong>
+                                available jobs
+                            </p>
+
+                        </div>
+
+
+                        <div class="job-list" id="jobList">
+
+                            <!-- JOB CARD 1 -->
+                            <article
+                                class="job-card"
+                                data-category="Web Development"
+                                data-budget="850"
+                                data-proposals="12"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Web Development
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    Build a Modern E-Commerce Website
+                                </h3>
+
+                                <p class="job-description">
+                                    Looking for an experienced developer to
+                                    build a modern and responsive e-commerce
+                                    website with product management,
+                                    shopping cart and checkout functionality.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>PHP</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $500 - $850
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Fixed Price
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        12 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            JD
+                                        </div>
+
+                                        <div>
+                                            <strong>James Davis</strong>
+                                            <small>
+                                                United States
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="1"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JOB CARD 2 -->
+                            <article
+                                class="job-card"
+                                data-category="Graphic Design"
+                                data-budget="300"
+                                data-proposals="8"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Graphic Design
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    Professional Brand Identity Design
+                                </h3>
+
+                                <p class="job-description">
+                                    Need a creative designer to develop a
+                                    complete brand identity including logo,
+                                    colors, typography and social media assets.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>Logo Design</span>
+                                    <span>Branding</span>
+                                    <span>Illustrator</span>
+                                    <span>Photoshop</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $150 - $300
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Fixed Price
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        8 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            EM
+                                        </div>
+
+                                        <div>
+                                            <strong>Emma Miller</strong>
+                                            <small>
+                                                United Kingdom
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="2"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JOB CARD 3 -->
+                            <article
+                                class="job-card"
+                                data-category="Mobile Development"
+                                data-budget="1200"
+                                data-proposals="17"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Mobile Development
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    React Native Fitness App Development
+                                </h3>
+
+                                <p class="job-description">
+                                    We are looking for a mobile developer to
+                                    create a cross-platform fitness application
+                                    with user accounts, workout tracking and
+                                    progress analytics.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>React Native</span>
+                                    <span>JavaScript</span>
+                                    <span>API</span>
+                                    <span>Firebase</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $800 - $1,200
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Fixed Price
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        17 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            OL
+                                        </div>
+
+                                        <div>
+                                            <strong>Olivia Lewis</strong>
+                                            <small>
+                                                Canada
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="3"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JOB CARD 4 -->
+                            <article
+                                class="job-card"
+                                data-category="Data Analysis"
+                                data-budget="650"
+                                data-proposals="6"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Data Analysis
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    Business Sales Data Dashboard
+                                </h3>
+
+                                <p class="job-description">
+                                    Looking for a data analyst to create an
+                                    interactive dashboard that presents sales,
+                                    revenue and customer performance metrics.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>Python</span>
+                                    <span>Excel</span>
+                                    <span>Power BI</span>
+                                    <span>SQL</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $400 - $650
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Fixed Price
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        6 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            RW
+                                        </div>
+
+                                        <div>
+                                            <strong>Robert Wilson</strong>
+                                            <small>
+                                                Australia
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="4"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JOB CARD 5 -->
+                            <article
+                                class="job-card"
+                                data-category="Digital Marketing"
+                                data-budget="450"
+                                data-proposals="10"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Digital Marketing
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    Social Media Marketing Campaign
+                                </h3>
+
+                                <p class="job-description">
+                                    Seeking a digital marketing specialist
+                                    to manage social media campaigns and
+                                    improve online engagement and visibility.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>SEO</span>
+                                    <span>Social Media</span>
+                                    <span>Content</span>
+                                    <span>Analytics</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $250 - $450
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Hourly
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        10 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            SC
+                                        </div>
+
+                                        <div>
+                                            <strong>Sophia Carter</strong>
+                                            <small>
+                                                Germany
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="5"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JOB CARD 6 -->
+                            <article
+                                class="job-card"
+                                data-category="Web Development"
+                                data-budget="1500"
+                                data-proposals="21"
+                            >
+
+                                <div class="job-card-top">
+
+                                    <div class="job-category">
+                                        Web Development
+                                    </div>
+
+                                    <button
+                                        class="save-job"
+                                        aria-label="Save job"
+                                    >
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                                <h3>
+                                    Django Backend Development Project
+                                </h3>
+
+                                <p class="job-description">
+                                    Need an experienced Django developer to
+                                    build REST APIs, authentication and an
+                                    admin dashboard for a SaaS application.
+                                </p>
+
+                                <div class="job-skills">
+
+                                    <span>Python</span>
+                                    <span>Django</span>
+                                    <span>REST API</span>
+                                    <span>MySQL</span>
+
+                                </div>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        $1,000 - $1,500
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Fixed Price
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-users"></i>
+                                        21 Proposals
+                                    </span>
+
+                                </div>
+
+                                <div class="job-card-footer">
+
+                                    <div class="client-info">
+                                        <div class="client-avatar">
+                                            DN
+                                        </div>
+
+                                        <div>
+                                            <strong>Daniel Nelson</strong>
+                                            <small>
+                                                Netherlands
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="view-job-btn"
+                                        data-job="6"
+                                    >
+                                        View Job
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- NO RESULTS -->
+                        <div class="no-jobs" id="noJobs">
+
+                            <div class="no-jobs-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <h3>No Jobs Found</h3>
+
+                            <p>
+                                Try changing your search or filter options.
+                            </p>
+
+                            <button id="resetJobSearch">
+                                Reset Search
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== JOB DETAILS ==================== -->
+        <section class="job-details-section section-padding" id="jobDetails">
+
+            <div class="container">
+
+                <div class="job-details-layout">
+
+                    <article class="job-details-card">
+
+                        <div class="job-details-header">
+
+                            <div>
+                                <span class="job-category">
+                                    Web Development
+                                </span>
+
+                                <h2>
+                                    Build a Modern E-Commerce Website
+                                </h2>
+
+                                <p class="posted-date">
+                                    <i class="fa-regular fa-clock"></i>
+                                    Posted 2 days ago
+                                </p>
+                            </div>
+
+                            <button
+                                class="save-job large-save"
+                                aria-label="Save job"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="job-overview">
+
+                            <div class="overview-item">
+                                <i class="fa-solid fa-wallet"></i>
+
+                                <div>
+                                    <span>Budget</span>
+                                    <strong>$500 - $850</strong>
+                                </div>
+                            </div>
+
+                            <div class="overview-item">
+                                <i class="fa-regular fa-clock"></i>
+
+                                <div>
+                                    <span>Project Type</span>
+                                    <strong>Fixed Price</strong>
+                                </div>
+                            </div>
+
+                            <div class="overview-item">
+                                <i class="fa-solid fa-users"></i>
+
+                                <div>
+                                    <span>Proposals</span>
+                                    <strong>12</strong>
+                                </div>
+                            </div>
+
+                            <div class="overview-item">
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <div>
+                                    <span>Client Location</span>
+                                    <strong>United States</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-detail-content">
+
+                            <h3>Project Description</h3>
+
+                            <p>
+                                We are looking for an experienced web developer
+                                to create a modern, professional and fully
+                                responsive e-commerce website.
+                            </p>
+
+                            <p>
+                                The website should provide an easy shopping
+                                experience with product browsing, product
+                                details, shopping cart and checkout functionality.
+                                The interface should work smoothly across
+                                desktop, tablet and mobile devices.
+                            </p>
+
+
+                            <h3>Required Skills</h3>
+
+                            <div class="job-skills large-skills">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Responsive Design</span>
+                            </div>
+
+
+                            <h3>Project Requirements</h3>
+
+                            <ul class="requirements-list">
+
+                                <li>
+                                    Create a responsive e-commerce interface.
+                                </li>
+
+                                <li>
+                                    Develop product listing and product detail
+                                    pages.
+                                </li>
+
+                                <li>
+                                    Implement shopping cart functionality.
+                                </li>
+
+                                <li>
+                                    Create a simple checkout interface.
+                                </li>
+
+                                <li>
+                                    Ensure compatibility with modern browsers.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="job-detail-actions">
+
+                            <button
+                                class="primary-btn"
+                                id="applyJobBtn"
+                            >
+                                Apply for This Job
+                            </button>
+
+                            <button
+                                class="secondary-btn"
+                                id="messageClientBtn"
+                            >
+                                Message Client
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CLIENT SIDEBAR -->
+                    <aside class="client-sidebar">
+
+                        <div class="client-card">
+
+                            <span class="sidebar-label">
+                                About the Client
+                            </span>
+
+                            <div class="client-profile">
+
+                                <div class="large-client-avatar">
+                                    JD
+                                </div>
+
+                                <div>
+                                    <h3>James Davis</h3>
+                                    <p>United States</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="client-stat">
+
+                                <div>
+                                    <span>Jobs Posted</span>
+                                    <strong>24</strong>
+                                </div>
+
+                                <div>
+                                    <span>Jobs Completed</span>
+                                    <strong>18</strong>
+                                </div>
+
+                                <div>
+                                    <span>Total Spent</span>
+                                    <strong>$14.8K</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="client-rating">
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.9
+                                </span>
+
+                                <small>
+                                    Client Rating
+                                </small>
+
+                            </div>
+
+
+                            <button class="secondary-btn full-width">
+                                View Client Profile
+                            </button>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== POST A JOB ==================== -->
+        <section class="post-job-section section-padding" id="postJob">
+
+            <div class="container">
+
+                <div class="section-heading center-heading">
+
+                    <span class="section-label">
+                        For Clients
+                    </span>
+
+                    <h2>
+                        Post a New Job
+                    </h2>
+
+                    <p>
+                        Tell freelancers what you need and find the right
+                        professional for your project.
+                    </p>
+
+                </div>
+
+
+                <form class="job-form" id="postJobForm">
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <h3>Project Information</h3>
+
+                            <p>
+                                Provide basic information about your project.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="jobTitle">
+                                Job Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jobTitle"
+                                name="jobTitle"
+                                placeholder="e.g. Build a modern business website"
+                                required
+                            >
+
+                            <small class="form-error" id="jobTitleError"></small>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="postJobCategory">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="postJobCategory"
+                                    name="category"
+                                    required
+                                >
+                                    <option value="">
+                                        Select a category
+                                    </option>
+
+                                    <option value="Web Development">
+                                        Web Development
+                                    </option>
+
+                                    <option value="Graphic Design">
+                                        Graphic Design
+                                    </option>
+
+                                    <option value="Mobile Development">
+                                        Mobile Development
+                                    </option>
+
+                                    <option value="Data Analysis">
+                                        Data Analysis
+                                    </option>
+
+                                    <option value="Digital Marketing">
+                                        Digital Marketing
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="projectType">
+                                    Project Type
+                                </label>
+
+                                <select
+                                    id="projectType"
+                                    name="projectType"
+                                    required
+                                >
+                                    <option value="">
+                                        Select project type
+                                    </option>
+
+                                    <option value="fixed">
+                                        Fixed Price
+                                    </option>
+
+                                    <option value="hourly">
+                                        Hourly
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="jobDescription">
+                                Project Description
+                            </label>
+
+                            <textarea
+                                id="jobDescription"
+                                name="description"
+                                rows="7"
+                                placeholder="Describe your project, requirements and expected outcome..."
+                                required
+                            ></textarea>
+
+                            <small class="character-count">
+                                0 / 1000 characters
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <h3>Budget & Timeline</h3>
+
+                            <p>
+                                Set your project budget and expected delivery time.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="minBudget">
+                                    Minimum Budget
+                                </label>
+
+                                <div class="input-with-prefix">
+                                    <span>$</span>
+
+                                    <input
+                                        type="number"
+                                        id="minBudget"
+                                        name="minBudget"
+                                        placeholder="100"
+                                        min="1"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="maxBudget">
+                                    Maximum Budget
+                                </label>
+
+                                <div class="input-with-prefix">
+                                    <span>$</span>
+
+                                    <input
+                                        type="number"
+                                        id="maxBudget"
+                                        name="maxBudget"
+                                        placeholder="500"
+                                        min="1"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="deliveryTime">
+                                    Expected Delivery
+                                </label>
+
+                                <select
+                                    id="deliveryTime"
+                                    name="deliveryTime"
+                                    required
+                                >
+                                    <option value="">
+                                        Select delivery time
+                                    </option>
+
+                                    <option value="1-3">
+                                        1 - 3 Days
+                                    </option>
+
+                                    <option value="4-7">
+                                        4 - 7 Days
+                                    </option>
+
+                                    <option value="1-2-weeks">
+                                        1 - 2 Weeks
+                                    </option>
+
+                                    <option value="2-4-weeks">
+                                        2 - 4 Weeks
+                                    </option>
+
+                                    <option value="1-month-plus">
+                                        1 Month+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="experienceLevel">
+                                    Experience Level
+                                </label>
+
+                                <select
+                                    id="experienceLevel"
+                                    name="experienceLevel"
+                                    required
+                                >
+                                    <option value="">
+                                        Select experience level
+                                    </option>
+
+                                    <option value="entry">
+                                        Entry Level
+                                    </option>
+
+                                    <option value="intermediate">
+                                        Intermediate
+                                    </option>
+
+                                    <option value="expert">
+                                        Expert
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <h3>Required Skills</h3>
+
+                            <p>
+                                Add skills that freelancers should have.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requiredSkills">
+                                Skills
+                            </label>
+
+                            <input
+                                type="text"
+                                id="requiredSkills"
+                                name="skills"
+                                placeholder="e.g. HTML, CSS, JavaScript, React"
+                            >
+
+                            <small>
+                                Separate multiple skills with commas.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="reset"
+                            class="secondary-btn"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Post Job
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== SUBMIT PROPOSAL ==================== -->
+        <section
+            class="proposal-section section-padding"
+            id="submitProposal"
+        >
+
+            <div class="container">
+
+                <div class="section-heading center-heading">
+
+                    <span class="section-label">
+                        Apply for Project
+                    </span>
+
+                    <h2>
+                        Submit Your Proposal
+                    </h2>
+
+                    <p>
+                        Introduce yourself, explain your experience and
+                        submit your offer to the client.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="proposal-form"
+                    id="proposalForm"
+                >
+
+                    <div class="selected-job-summary">
+
+                        <div class="selected-job-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Applying for
+                            </span>
+
+                            <h3>
+                                Build a Modern E-Commerce Website
+                            </h3>
+
+                            <p>
+                                Budget: $500 - $850
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="coverLetter">
+                            Cover Letter
+                        </label>
+
+                        <textarea
+                            id="coverLetter"
+                            name="coverLetter"
+                            rows="8"
+                            placeholder="Introduce yourself and explain why you are the right person for this project..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="proposedPrice">
+                                Your Proposed Price
+                            </label>
+
+                            <div class="input-with-prefix">
+                                <span>$</span>
+
+                                <input
+                                    type="number"
+                                    id="proposedPrice"
+                                    name="proposedPrice"
+                                    placeholder="700"
+                                    min="1"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="proposalDelivery">
+                                Delivery Time
+                            </label>
+
+                            <select
+                                id="proposalDelivery"
+                                name="deliveryTime"
+                                required
+                            >
+                                <option value="">
+                                    Select delivery time
+                                </option>
+
+                                <option value="1-3">
+                                    1 - 3 Days
+                                </option>
+
+                                <option value="4-7">
+                                    4 - 7 Days
+                                </option>
+
+                                <option value="1-2-weeks">
+                                    1 - 2 Weeks
+                                </option>
+
+                                <option value="2-4-weeks">
+                                    2 - 4 Weeks
+                                </option>
+
+                                <option value="1-month">
+                                    1 Month+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="proposalSkills">
+                            Relevant Skills & Experience
+                        </label>
+
+                        <textarea
+                            id="proposalSkills"
+                            name="skillsExperience"
+                            rows="5"
+                            placeholder="Describe your relevant skills, previous experience and similar projects..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="proposal-terms">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="proposalAgreement"
+                                required
+                            >
+
+                            <span>
+                                I confirm that the information provided in
+                                this proposal is accurate.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                        >
+                            Save Draft
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Submit Proposal
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== MY PROPOSALS ==================== -->
+        <section
+            class="my-proposals-section section-padding"
+            id="myProposals"
+        >
+
+            <div class="container">
+
+                <div class="marketplace-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            Freelancer Dashboard
+                        </span>
+
+                        <h2>
+                            My Proposals
+                        </h2>
+
+                        <p>
+                            Track the jobs you have applied for and monitor
+                            your proposal status.
+                        </p>
+
+                    </div>
+
+
+                    <div class="proposal-filter">
+
+                        <label for="proposalStatus">
+                            Filter
+                        </label>
+
+                        <select id="proposalStatus">
+
+                            <option value="all">
+                                All Proposals
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="accepted">
+                                Accepted
+                            </option>
+
+                            <option value="rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Proposal Stats -->
+                <div class="proposal-stats">
+
+                    <div class="proposal-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+
+                        <div>
+                            <span>Total Proposals</span>
+                            <strong>12</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="proposal-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-regular fa-hourglass"></i>
+                        </div>
+
+                        <div>
+                            <span>Pending</span>
+                            <strong>6</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="proposal-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Accepted</span>
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="proposal-stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <div>
+                            <span>Rejected</span>
+                            <strong>2</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Proposal List -->
+                <div class="proposals-list" id="proposalsList">
+
+
+                    <!-- PROPOSAL 1 -->
+                    <article
+                        class="proposal-card"
+                        data-status="pending"
+                    >
+
+                        <div class="proposal-main">
+
+                            <div class="proposal-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div class="proposal-info">
+
+                                <span class="proposal-category">
+                                    Web Development
+                                </span>
+
+                                <h3>
+                                    Build a Modern E-Commerce Website
+                                </h3>
+
+                                <p>
+                                    Submitted 2 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-details">
+
+                            <div>
+                                <span>Proposed Price</span>
+                                <strong>$700</strong>
+                            </div>
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong>14 Days</strong>
+                            </div>
+
+                            <div>
+                                <span>Client</span>
+                                <strong>James Davis</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-actions">
+
+                            <span class="status-badge pending">
+                                Pending
+                            </span>
+
+                            <button class="view-proposal-btn">
+                                View
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROPOSAL 2 -->
+                    <article
+                        class="proposal-card"
+                        data-status="accepted"
+                    >
+
+                        <div class="proposal-main">
+
+                            <div class="proposal-icon">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+
+                            <div class="proposal-info">
+
+                                <span class="proposal-category">
+                                    Mobile Development
+                                </span>
+
+                                <h3>
+                                    Fitness Tracking Mobile Application
+                                </h3>
+
+                                <p>
+                                    Submitted 5 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-details">
+
+                            <div>
+                                <span>Proposed Price</span>
+                                <strong>$1,050</strong>
+                            </div>
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong>21 Days</strong>
+                            </div>
+
+                            <div>
+                                <span>Client</span>
+                                <strong>Olivia Lewis</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-actions">
+
+                            <span class="status-badge accepted">
+                                Accepted
+                            </span>
+
+                            <button class="view-proposal-btn">
+                                View
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROPOSAL 3 -->
+                    <article
+                        class="proposal-card"
+                        data-status="rejected"
+                    >
+
+                        <div class="proposal-main">
+
+                            <div class="proposal-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <div class="proposal-info">
+
+                                <span class="proposal-category">
+                                    Graphic Design
+                                </span>
+
+                                <h3>
+                                    Complete Brand Identity Package
+                                </h3>
+
+                                <p>
+                                    Submitted 1 week ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-details">
+
+                            <div>
+                                <span>Proposed Price</span>
+                                <strong>$275</strong>
+                            </div>
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong>7 Days</strong>
+                            </div>
+
+                            <div>
+                                <span>Client</span>
+                                <strong>Emma Miller</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="proposal-actions">
+
+                            <span class="status-badge rejected">
+                                Rejected
+                            </span>
+
+                            <button class="view-proposal-btn">
+                                View
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- Empty State -->
+                <div
+                    class="no-proposals"
+                    id="noProposals"
+                >
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-file-circle-xmark"></i>
+                    </div>
+
+                    <h3>No Proposals Found</h3>
+
+                    <p>
+                        You don't have any proposals matching this filter.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== LOGIN MODAL ==================== -->
+    <div class="modal" id="loginModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="closeLoginModal"
+                aria-label="Close login modal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+
+                <h2>Welcome Back</h2>
+
+                <p>
+                    Login to continue to your Skillora account.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-width"
+                >
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================== REGISTER MODAL ==================== -->
+    <div class="modal" id="registerModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="closeRegisterModal"
+                aria-label="Close register modal"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+
+                <h2>Create Your Account</h2>
+
+                <p>
+                    Join Skillora and start building your freelance career.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+                <div class="form-group">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-width"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================== TOAST ==================== -->
+    <div
+        class="toast"
+        id="toast"
+        role="alert"
+        aria-live="polite"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Action completed successfully.
+        </span>
+
+    </div>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Skillora
+                </a>
+
+                <p>
+                    Connecting talented professionals with meaningful
+                    freelance opportunities.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Marketplace</h3>
+
+                <a href="services.html">Find Freelancers</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="#postJob">Post a Job</a>
+                <a href="#myProposals">My Proposals</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="about.html">About</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact</a>
+                <a href="#">Help Center</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="#" id="footerLogin">
+                    Login
+                </a>
+
+                <a href="#" id="footerRegister">
+                    Register
+                </a>
+
+                <a href="#">
+                    My Profile
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 Skillora. All rights reserved.
+                </p>
+
+                <div class="footer-legal">
+
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Font Awesome -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js">
+    </script>
+
+    <!-- Week 4 JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

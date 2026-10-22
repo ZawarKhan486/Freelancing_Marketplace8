@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillora - Freelancing Marketplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+            Skillora
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Find Freelancers</a>
+            <a href="services.html">Find Jobs</a>
+            <a href="orders.html">My Orders</a>           
+            <a href="messages.html">Messages</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="marketplace.html" class="week7-home-btn">Explore Marketplace </a>
+             <a href="favorites.html" class="week7-home-btn secondary"> ♥ My Favorites </a>
+
+            <a href="dashboard.html" class="week7-home-btn secondary">My Dashboard</a>
+            <a href="#about">About</a>
+
+            <div class="mobile-auth">
+                <button class="login-btn open-login">Login</button>
+                <button class="register-btn open-register">Register</button>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn open-login">Login</button>
+            <button class="register-btn open-register">Register</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-circle circle-one"></div>
+    <div class="hero-circle circle-two"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                The future of freelance work
+            </span>
+
+            <h1>Find the right talent for your next big idea.</h1>
+
+            <p>
+                Connect with skilled freelancers, discover professional services,
+                and bring your projects to life with Skillora.
+            </p>
+
+            <div class="hero-search">
+
+                <div class="search-field">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="heroSearch" type="text" placeholder="What service are you looking for?">
+                </div>
+
+                <select id="searchCategory">
+                    <option value="all">All Categories</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="Data Analysis">Data Analysis</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+            <div class="popular-searches">
+                <span>Popular:</span>
+                <button data-search="Web Development">Web Development</button>
+                <button data-search="Logo Design">Logo Design</button>
+                <button data-search="WordPress">WordPress</button>
+                <button data-search="SEO">SEO</button>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="hero-card-main">
+
+                <div class="hero-card-top">
+                    <span>Top Freelancer</span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+
+                <div class="hero-profile">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Top Freelancer">
+
+                    <div>
+                        <h3>Ali Raza</h3>
+                        <p>Web Developer</p>
+                    </div>
+
+                    <span class="verified">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+
+                <div class="hero-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <strong>4.9</strong>
+                    <span>128 reviews</span>
+                </div>
+
+                <div class="hero-project">
+                    <span>Modern Website</span>
+                    <strong>$80+</strong>
+                </div>
+
+                <div class="hero-progress">
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="floating-card floating-one">
+                <i class="fa-solid fa-check"></i>
+                <div>
+                    <strong>Project Completed</strong>
+                    <span>Just now</span>
+                </div>
+            </div>
+
+            <div class="floating-card floating-two">
+                <strong>4.9</strong>
+                <i class="fa-solid fa-star"></i>
+                <span>Top Rated</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="trusted">
+    <div class="container">
+        <p>Trusted by professionals and growing businesses</p>
+
+        <div class="trusted-items">
+            <span>TECHFLOW</span>
+            <span>NOVALABS</span>
+            <span>PIXELPRO</span>
+            <span>BRIGHTWORKS</span>
+            <span>STARTUPLY</span>
+        </div>
+    </div>
+</section>
+
+<section class="section categories-section" id="categories">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">EXPLORE CATEGORIES</span>
+                <h2>Find talent for every need</h2>
+            </div>
+
+            <a href="services.html" class="view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="categories-grid">
+
+            <article class="category-card" data-category="Web Development">
+                <div class="category-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>1,240+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Graphic Design">
+                <div class="category-icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>980+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Mobile Development">
+                <div class="category-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>760+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Data Analysis">
+                <div class="category-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+                <h3>Data Analysis</h3>
+                <p>540+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Digital Marketing">
+                <div class="category-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <h3>Digital Marketing</h3>
+                <p>890+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Video Editing">
+                <div class="category-icon">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <h3>Video Editing</h3>
+                <p>620+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Writing">
+                <div class="category-icon">
+                    <i class="fa-solid fa-pen"></i>
+                </div>
+                <h3>Writing</h3>
+                <p>720+ freelancers</p>
+            </article>
+
+            <article class="category-card" data-category="Business">
+                <div class="category-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3>Business</h3>
+                <p>430+ freelancers</p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section how-section" id="about">
+    <div class="container">
+
+        <div class="section-heading centered">
+            <div>
+                <span class="section-label">HOW IT WORKS</span>
+                <h2>Get your project done in 3 simple steps</h2>
+                <p>Everything you need to move from idea to execution.</p>
+            </div>
+        </div>
+
+        <div class="steps-grid">
+
+            <article class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Find a Freelancer</h3>
+                <p>
+                    Search thousands of talented professionals and find the
+                    perfect match for your project.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3>Discuss Your Project</h3>
+                <p>
+                    Connect with freelancers, discuss requirements, and
+                    choose the right service package.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Get It Done</h3>
+                <p>
+                    Collaborate with your freelancer and receive high-quality
+                    work delivered on time.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section freelancers-section" id="freelancers">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">TOP FREELANCERS</span>
+                <h2>Meet talented professionals</h2>
+            </div>
+
+            <a href="services.html" class="view-all">
+                Browse All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="developer">Developers</button>
+            <button class="filter-btn" data-filter="designer">Designers</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+
+        <div class="freelancers-grid">
+
+            <article class="freelancer-card" data-role="developer">
+                <div class="freelancer-image">
+                    <img src="https://i.pravatar.cc/400?img=12" alt="Ali Raza">
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="freelancer-info">
+                    <div class="freelancer-name">
+                        <div>
+                            <h3>Ali Raza</h3>
+                            <p>Web Developer</p>
+                        </div>
+                        <span class="online-dot"></span>
+                    </div>
+
+                    <div class="freelancer-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong>4.9</strong>
+                        <span>(128)</span>
+                    </div>
+
+                    <p class="freelancer-service">
+                        Modern Responsive Website
+                    </p>
+
+                    <div class="freelancer-footer">
+                        <span>From <strong>$80</strong></span>
+                        <button class="view-profile">View Profile</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="freelancer-card" data-role="designer">
+                <div class="freelancer-image">
+                    <img src="https://i.pravatar.cc/400?img=47" alt="Sara Ahmed">
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="freelancer-info">
+                    <div class="freelancer-name">
+                        <div>
+                            <h3>Sara Ahmed</h3>
+                            <p>Graphic Designer</p>
+                        </div>
+                        <span class="online-dot"></span>
+                    </div>
+
+                    <div class="freelancer-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong>4.8</strong>
+                        <span>(96)</span>
+                    </div>
+
+                    <p class="freelancer-service">
+                        Professional Logo Design
+                    </p>
+
+                    <div class="freelancer-footer">
+                        <span>From <strong>$45</strong></span>
+                        <button class="view-profile">View Profile</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="freelancer-card" data-role="developer">
+                <div class="freelancer-image">
+                    <img src="https://i.pravatar.cc/400?img=68" alt="Hamza Khan">
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="freelancer-info">
+                    <div class="freelancer-name">
+                        <div>
+                            <h3>Hamza Khan</h3>
+                            <p>App Developer</p>
+                        </div>
+                        <span class="online-dot"></span>
+                    </div>
+
+                    <div class="freelancer-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong>5.0</strong>
+                        <span>(74)</span>
+                    </div>
+
+                    <p class="freelancer-service">
+                        Android & iOS Mobile App
+                    </p>
+
+                    <div class="freelancer-footer">
+                        <span>From <strong>$150</strong></span>
+                        <button class="view-profile">View Profile</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="freelancer-card" data-role="marketing">
+                <div class="freelancer-image">
+                    <img src="https://i.pravatar.cc/400?img=11" alt="Usman Tariq">
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="freelancer-info">
+                    <div class="freelancer-name">
+                        <div>
+                            <h3>Usman Tariq</h3>
+                            <p>Marketing Expert</p>
+                        </div>
+                        <span class="online-dot"></span>
+                    </div>
+
+                    <div class="freelancer-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong>4.7</strong>
+                        <span>(65)</span>
+                    </div>
+
+                    <p class="freelancer-service">
+                        SEO & Digital Marketing
+                    </p>
+
+                    <div class="freelancer-footer">
+                        <span>From <strong>$60</strong></span>
+                        <button class="view-profile">View Profile</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section services-section" id="jobs">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">POPULAR SERVICES</span>
+                <h2>Services people are hiring for</h2>
+            </div>
+
+            <a href="services.html" class="view-all">
+                Explore Services
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="services-grid-home">
+
+            <article class="service-card">
+                <div class="service-card-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <span>Web Development</span>
+                <h3>Modern Business Website</h3>
+                <p>Professional responsive websites for businesses.</p>
+                <strong>Starting at $80</strong>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card-icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <span>Graphic Design</span>
+                <h3>Professional Logo Design</h3>
+                <p>Creative brand identities designed for your business.</p>
+                <strong>Starting at $45</strong>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <span>Digital Marketing</span>
+                <h3>SEO & Social Media</h3>
+                <p>Grow your online presence with strategic marketing.</p>
+                <strong>Starting at $60</strong>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+                <span>READY TO GET STARTED?</span>
+                <h2>Turn your idea into reality.</h2>
+                <p>
+                    Find skilled professionals and start building
+                    something great today.
+                </p>
+            </div>
+
+            <div class="cta-actions">
+                <button class="cta-primary open-register">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <a href="services.html" class="cta-secondary">
+                    Browse Freelancers
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                Skillora
+            </a>
+            <p>
+                Connecting talented freelancers with ambitious businesses
+                around the world.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Marketplace</h4>
+            <a href="services.html">Find Freelancers</a>
+            <a href="services.html">Find Services</a>
+            <a href="services.html">Find Jobs</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#categories">Categories</a>
+            <a href="#home">Home</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 Skillora. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="loginModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('loginModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p>Login to your Skillora account.</p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Login
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Don't have an account?
+            <button onclick="switchModal('loginModal','registerModal')">
+                Register
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="modal" id="registerModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('registerModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p>Join the Skillora marketplace.</p>
+
+        <form id="registerForm">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Create Account
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Already have an account?
+            <button onclick="switchModal('registerModal','loginModal')">
+                Login
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success</span>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Service Details | Skillora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+            Skillora
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="services.html">Find Freelancers</a>
+            <a href="services.html">Find Jobs</a>
+            <a href="index.html#about">About</a>
+
+            <div class="mobile-auth">
+                <button class="login-btn open-login">Login</button>
+                <button class="register-btn open-register">Register</button>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn open-login">Login</button>
+            <button class="register-btn open-register">Register</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main class="service-page">
+
+    <div class="container">
+
+        <div class="service-details">
+
+            <section class="service-main">
+
+                <img id="serviceImage"
+                     src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                     alt="Service">
+
+                <span class="service-category" id="serviceCategory">
+                    Web Development
+                </span>
+
+                <h1 id="serviceTitle">
+                    Modern Responsive Website
+                </h1>
+
+                <div class="service-rating">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <strong id="serviceRating">4.9</strong>
+
+                    <span id="serviceReviews">
+                        128 Reviews
+                    </span>
+
+                </div>
+
+                <h2>About This Service</h2>
+
+                <p class="service-description" id="serviceDescription">
+                    I will create a modern, professional and fully responsive
+                    website designed according to your requirements. The
+                    website will work smoothly across desktop, tablet and
+                    mobile devices.
+
+                    <br><br>
+
+                    The service includes clean code, responsive layouts,
+                    modern UI design and optimized user experience.
+                </p>
+
+                <div class="service-features">
+
+                    <h2>What's Included</h2>
+
+                    <div class="feature-list">
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fully responsive design</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Modern user interface</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Clean and organized code</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Cross-device compatibility</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <aside class="service-sidebar">
+
+                <h2>Service Package</h2>
+
+                <div class="price-box">
+
+                    <span>Starting at</span>
+
+                    <strong id="servicePrice">
+                        $80
+                    </strong>
+
+                </div>
+
+                <button class="order-btn" id="orderService">
+                    Continue
+                </button>
+
+                <button class="message-btn" id="messageSeller">
+                    <i class="fa-regular fa-message"></i>
+                    Contact Seller
+                </button>
+
+                <div class="seller-box">
+
+                    <h3>About the Seller</h3>
+
+                    <div class="seller">
+
+                        <img id="sellerImage"
+                             src="https://i.pravatar.cc/100?img=12"
+                             alt="Seller">
+
+                        <div>
+
+                            <h4 id="sellerName">
+                                Ali Raza
+                            </h4>
+
+                            <span id="sellerRole">
+                                Professional Web Developer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="seller-profile-btn" id="sellerProfile">
+                        View Seller Profile
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div class="modal" id="loginModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('loginModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p>Login to your Skillora account.</p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Login
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Don't have an account?
+            <button onclick="switchModal('loginModal','registerModal')">
+                Register
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="modal" id="registerModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('registerModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p>Join the Skillora marketplace.</p>
+
+        <form id="registerForm">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Create Account
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Already have an account?
+            <button onclick="switchModal('registerModal','loginModal')">
+                Login
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success</span>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

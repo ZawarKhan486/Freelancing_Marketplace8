@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Freelancer Profile | Skillora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+            Skillora
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="services.html">Find Freelancers</a>
+            <a href="services.html">Find Jobs</a>
+            <a href="index.html#about">About</a>
+
+            <div class="mobile-auth">
+                <button class="login-btn open-login">Login</button>
+                <button class="register-btn open-register">Register</button>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn open-login">Login</button>
+            <button class="register-btn open-register">Register</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main class="profile-page">
+
+    <div class="container">
+
+        <div class="profile-header">
+
+            <div class="profile-info">
+
+                <img id="profileImage"
+                     class="profile-avatar"
+                     src="https://i.pravatar.cc/300?img=12"
+                     alt="Freelancer">
+
+                <div>
+
+                    <h1 id="profileName">Ali Raza</h1>
+
+                    <p class="profile-role" id="profileRole">
+                        Professional Web Developer
+                    </p>
+
+                    <div class="profile-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <strong id="profileRating">4.9</strong>
+                        <span id="profileReviews">128 reviews</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <button class="outline-btn" id="saveProfile">
+                    <i class="fa-regular fa-heart"></i>
+                    Save
+                </button>
+
+                <button class="contact-btn" id="contactFreelancer">
+                    <i class="fa-regular fa-message"></i>
+                    Contact
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="profile-content">
+
+            <div class="profile-section">
+
+                <h2>About Me</h2>
+
+                <p id="profileAbout">
+                    I am a professional freelance developer focused on
+                    building modern, responsive and high-quality websites
+                    for businesses and startups. I specialize in creating
+                    clean user interfaces and reliable web experiences.
+                </p>
+
+                <h2 class="profile-subheading">Skills</h2>
+
+                <div class="skills" id="profileSkills"></div>
+
+            </div>
+
+            <div class="profile-section">
+
+                <h2>Profile Statistics</h2>
+
+                <div class="stat-list">
+
+                    <div class="stat">
+                        <span>Completed Projects</span>
+                        <strong id="profileProjects">156</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Client Rating</span>
+                        <strong id="profileStatRating">4.9/5</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Response Time</span>
+                        <strong id="profileResponse">1 hour</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Experience</span>
+                        <strong id="profileExperience">5+ Years</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div class="modal" id="loginModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('loginModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p>Login to your Skillora account.</p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Login
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Don't have an account?
+            <button onclick="switchModal('loginModal','registerModal')">
+                Register
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="modal" id="registerModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('registerModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p>Join the Skillora marketplace.</p>
+
+        <form id="registerForm">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Create Account
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Already have an account?
+            <button onclick="switchModal('registerModal','loginModal')">
+                Login
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success</span>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

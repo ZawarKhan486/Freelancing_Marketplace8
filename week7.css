@@ -1,0 +1,187 @@
+
+/* ===================================
+   SKILLORA WEEK 7
+   Marketplace Search and Dashboard
+=================================== */
+
+.w7-container {
+    width: min(1200px, 92%);
+    margin: 30px auto;
+}
+
+.w7-heading {
+    margin-bottom: 22px;
+}
+
+.w7-heading h1 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin-bottom: 8px;
+}
+
+.w7-heading p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.w7-search-panel,
+.w7-filter-panel,
+.w7-dashboard-card,
+.w7-favorite-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.w7-search-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.w7-container input,
+.w7-container select,
+.w7-container button {
+    font: inherit;
+}
+
+.w7-container input,
+.w7-container select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.w7-button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.w7-button:hover {
+    background: #1d4ed8;
+}
+
+.w7-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.w7-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.w7-results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.w7-results-grid,
+.w7-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.w7-service-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.w7-service-card h3 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.w7-service-card p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.w7-service-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.w7-favorite-button {
+    padding: 9px 12px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.w7-favorite-button.is-saved {
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+.w7-empty {
+    padding: 35px 15px;
+    text-align: center;
+    color: #6b7280;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+}
+
+.w7-stat-number {
+    display: block;
+    margin-top: 12px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.w7-stat-label {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 850px) {
+    .w7-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .w7-results-grid,
+    .w7-dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .w7-search-panel,
+    .w7-filters,
+    .w7-results-grid,
+    .w7-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .w7-search-panel,
+    .w7-filter-panel,
+    .w7-dashboard-card {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | Skillora</title>
+
+    <!-- Existing project styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Week 5 styles -->
+    <link rel="stylesheet" href="week5.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="w5-navbar">
+        <div class="w5-nav-inner">
+            <a href="index.html" class="w5-brand">Skillora<span>.</span></a>
+
+            <nav class="w5-nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Find Freelancers</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="orders.html" class="active">My Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w5-container">
+
+        <section class="w5-heading">
+            <div>
+                <p class="w5-eyebrow">WORKSPACE</p>
+                <h1>My Orders</h1>
+                <p class="w5-subtitle">
+                    Manage your projects, track progress, and monitor deliveries
+                    in one place.
+                </p>
+            </div>
+
+            <a href="jobs.html" class="w5-button w5-button-primary">
+                Find New Projects
+            </a>
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="w5-stats">
+
+            <article class="w5-stat">
+                <span class="w5-stat-label">Total Projects</span>
+                <h2 id="statAll">0</h2>
+                <p>All your projects</p>
+            </article>
+
+            <article class="w5-stat">
+                <span class="w5-stat-label">In Progress</span>
+                <h2 id="statProgress">0</h2>
+                <p>Currently being worked on</p>
+            </article>
+
+            <article class="w5-stat">
+                <span class="w5-stat-label">Awaiting Review</span>
+                <h2 id="statSubmitted">0</h2>
+                <p>Work submitted for approval</p>
+            </article>
+
+            <article class="w5-stat">
+                <span class="w5-stat-label">Total Project Value</span>
+                <h2 id="statValue">Rs. 0</h2>
+                <p>Combined project budgets</p>
+            </article>
+
+        </section>
+
+        <!-- Orders Panel -->
+        <section class="w5-panel">
+
+            <div class="w5-panel-header">
+                <div>
+                    <h2>Your Projects</h2>
+                    <p>Search and filter your project list.</p>
+                </div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="w5-toolbar">
+
+                <div class="w5-search">
+                    <label for="orderSearch">Search projects</label>
+                    <input
+                        type="search"
+                        id="orderSearch"
+                        placeholder="Search by project title..."
+                    >
+                </div>
+
+                <div class="w5-filter">
+                    <label for="orderStatus">Project Status</label>
+                    <select id="orderStatus">
+                        <option value="all">All Statuses</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Submitted">Submitted for Review</option>
+                        <option value="Revision Requested">Revision Requested</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div>
+
+                <div class="w5-filter">
+                    <label for="orderRole">My Role</label>
+                    <select id="orderRole">
+                        <option value="all">All Projects</option>
+                        <option value="client">Client</option>
+                        <option value="freelancer">Freelancer</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Projects will be inserted by week5.js -->
+            <div id="ordersGrid" class="w5-project-grid"></div>
+
+            <!-- Empty State -->
+            <div id="ordersEmpty" class="w5-empty" hidden>
+                <div class="w5-empty-icon">📂</div>
+                <h3>No projects found</h3>
+                <p>
+                    Accepted proposals will appear here when they are
+                    connected to your project workflow.
+                </p>
+                <a href="jobs.html" class="w5-button w5-button-primary">
+                    Explore Jobs
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w5-footer">
+        <p>
+            © <span id="currentYear"></span> Skillora.
+            Freelance smarter. Build better.
+        </p>
+    </footer>
+
+    <!-- Existing JavaScript -->
+    <script src="script.js" defer></script>
+
+    <!-- Week 5 JavaScript -->
+    <script src="week5.js" defer></script>
+
+</body>
+</html>

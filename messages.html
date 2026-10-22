@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | Skillora</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="week5.css">
+    <link rel="stylesheet" href="week6.css">
+</head>
+<body>
+
+    <header class="w5-navbar">
+        <div class="w5-nav-inner">
+            <a href="index.html" class="w5-brand">Skillora<span>.</span></a>
+
+            <nav class="w5-nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Find Freelancers</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="orders.html">My Orders</a>
+                <a href="messages.html" class="active">Messages</a>
+                <a href="notifications.html">Notifications</a>
+                <a href="reviews.html">Reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="w6-container">
+        <section class="w6-page-heading">
+            <p class="w6-eyebrow">STAY CONNECTED</p>
+            <h1>Messages</h1>
+            <p>Communicate with clients and freelancers about your projects.</p>
+        </section>
+
+        <section class="w6-chat-layout">
+
+            <aside class="w6-conversations">
+                <div class="w6-section-heading">
+                    <h2>Conversations</h2>
+                    <span id="conversationCount">0</span>
+                </div>
+
+                <label class="w6-search-label" for="conversationSearch">
+                    Search conversations
+                </label>
+                <input
+                    type="search"
+                    id="conversationSearch"
+                    class="w6-input"
+                    placeholder="Search people..."
+                >
+
+                <div id="conversationList" class="w6-conversation-list"></div>
+
+                <div id="noConversations" class="w6-empty" hidden>
+                    <p>No conversations found.</p>
+                </div>
+            </aside>
+
+            <section class="w6-chat-panel">
+                <div id="chatWelcome" class="w6-chat-welcome">
+                    <div class="w6-welcome-icon">💬</div>
+                    <h2>Your messages</h2>
+                    <p>Select a conversation to read and send messages.</p>
+                </div>
+
+                <div id="chatWindow" class="w6-chat-window" hidden>
+                    <header class="w6-chat-header">
+                        <div id="chatAvatar" class="w6-avatar">S</div>
+                        <div>
+                            <h2 id="chatName">Conversation</h2>
+                            <p id="chatProject">Project conversation</p>
+                        </div>
+                    </header>
+
+                    <div
+                        id="messageList"
+                        class="w6-message-list"
+                        aria-live="polite"
+                    ></div>
+
+                    <form id="messageForm" class="w6-message-form">
+                        <label class="w6-visually-hidden" for="messageInput">
+                            Write a message
+                        </label>
+                        <input
+                            type="text"
+                            id="messageInput"
+                            class="w6-input"
+                            placeholder="Write your message..."
+                            maxlength="1000"
+                            required
+                        >
+                        <button type="submit" class="w6-send-button">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="w5-footer">
+        <p>© <span id="currentYear"></span> Skillora. Freelance smarter. Build better.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="week6.js" defer></script>
+</body>
+</html>

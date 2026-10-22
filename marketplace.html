@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace | Skillora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="week7.css">
+</head>
+<body>
+    <main class="w7-container">
+        <header class="w7-heading">
+            <h1>Explore the Marketplace</h1>
+            <p>Find services and freelancers that match your needs.</p>
+            <a href="index.html">Home</a> |
+            <a href="favorites.html">My Favorites</a> |
+            <a href="dashboard.html">Dashboard</a>
+        </header>
+
+        <section class="w7-search-panel">
+            <input
+                type="search"
+                id="w7Search"
+                placeholder="Search services, freelancers, categories..."
+                aria-label="Search marketplace"
+            >
+
+            <select id="w7Category" aria-label="Category">
+                <option value="all">All Categories</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Mobile App Development">Mobile App Development</option>
+                <option value="Data Analysis">Data Analysis</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+            </select>
+
+            <button class="w7-button" id="w7Reset" type="button">
+                Reset Filters
+            </button>
+        </section>
+
+        <section class="w7-filters" aria-label="Advanced filters">
+            <div class="w7-field">
+                <label for="w7MinPrice">Minimum Price ($)</label>
+                <input type="number" id="w7MinPrice" min="0" placeholder="0">
+            </div>
+
+            <div class="w7-field">
+                <label for="w7MaxPrice">Maximum Price ($)</label>
+                <input type="number" id="w7MaxPrice" min="0" placeholder="No limit">
+            </div>
+
+            <div class="w7-field">
+                <label for="w7Rating">Minimum Rating</label>
+                <select id="w7Rating">
+                    <option value="0">Any Rating</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="4.5">4.5+ Stars</option>
+                    <option value="4.8">4.8+ Stars</option>
+                </select>
+            </div>
+
+            <div class="w7-field">
+                <label for="w7Delivery">Delivery Time</label>
+                <select id="w7Delivery">
+                    <option value="0">Any Delivery Time</option>
+                    <option value="3">Within 3 Days</option>
+                    <option value="5">Within 5 Days</option>
+                    <option value="7">Within 7 Days</option>
+                </select>
+            </div>
+
+            <div class="w7-field">
+                <label for="w7Experience">Experience Level</label>
+                <select id="w7Experience">
+                    <option value="all">All Levels</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select>
+            </div>
+
+            <div class="w7-field">
+                <label for="w7Sort">Sort Results</label>
+                <select id="w7Sort">
+                    <option value="newest">Newest</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Highest Rating</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <div class="w7-results-header">
+                <h2>Marketplace Services</h2>
+                <p id="w7ResultCount" aria-live="polite">Loading services...</p>
+            </div>
+
+            <div id="w7Results" class="w7-results-grid"></div>
+        </section>
+    </main>
+
+    <script src="week7.js"></script>
+</body>
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Freelancers | Skillora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+            Skillora
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Find Freelancers</a>
+            <a href="services.html">Find Jobs</a>
+            <a href="index.html#about">About</a>
+
+            <div class="mobile-auth">
+                <button class="login-btn open-login">Login</button>
+                <button class="register-btn open-register">Register</button>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn open-login">Login</button>
+            <button class="register-btn open-register">Register</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+<section class="marketplace-hero">
+    <div class="container">
+
+        <div class="marketplace-heading">
+            <span class="section-badge">
+                <i class="fa-solid fa-users"></i>
+                Freelance Marketplace
+            </span>
+
+            <h1>Find the perfect freelancer for your project</h1>
+
+            <p>
+                Browse talented professionals and discover services
+                that match your project requirements.
+            </p>
+        </div>
+
+        <div class="market-search">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="serviceSearch"
+                    placeholder="Search for services or freelancers..."
+                >
+
+                <button id="marketplaceSearchBtn" type="button">
+                    Search
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="marketplace-section">
+    <div class="container">
+
+        <div class="marketplace-layout">
+
+            <aside class="filter-sidebar">
+
+                <div class="filter-header">
+                    <h3>Filters</h3>
+                    <button id="clearFilters">Clear</button>
+                </div>
+
+                <div class="filter-group">
+
+                    <h4>Categories</h4>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="All" checked>
+                        <span>All Categories</span>
+                    </label>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="Web Development">
+                        <span>Web Development</span>
+                    </label>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="Graphic Design">
+                        <span>Graphic Design</span>
+                    </label>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="Mobile Development">
+                        <span>Mobile Development</span>
+                    </label>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="Data Analysis">
+                        <span>Data Analysis</span>
+                    </label>
+
+                    <label class="category-option">
+                        <input type="radio" name="category" value="Digital Marketing">
+                        <span>Digital Marketing</span>
+                    </label>
+
+                </div>
+
+                <div class="filter-group">
+
+                    <h4>Popular Skills</h4>
+
+                    <div class="skill-tags">
+                        <button data-skill="HTML">HTML</button>
+                        <button data-skill="CSS">CSS</button>
+                        <button data-skill="JavaScript">JavaScript</button>
+                        <button data-skill="React">React</button>
+                        <button data-skill="Python">Python</button>
+                        <button data-skill="UI/UX">UI/UX</button>
+                    </div>
+
+                </div>
+
+            </aside>
+
+            <div class="marketplace-content">
+
+                <div class="marketplace-toolbar">
+
+                    <div>
+                        <h2>Freelancers & Services</h2>
+                        <p id="resultCount">Showing 12 results</p>
+                    </div>
+
+                    <div class="sort-wrapper">
+                        <label for="sortSelect">Sort by:</label>
+
+                        <select id="sortSelect">
+                            <option value="default">Recommended</option>
+                            <option value="priceLow">Price: Low to High</option>
+                            <option value="priceHigh">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="services-grid" id="servicesGrid">
+
+                    <article class="market-card"
+                        data-name="Ali Raza"
+                        data-title="Modern Responsive Website"
+                        data-category="Web Development"
+                        data-price="80"
+                        data-rating="4.9"
+                        data-skills="HTML CSS JavaScript">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=12" alt="Ali Raza">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="Ali Raza">
+
+                                <div>
+                                    <h4>Ali Raza</h4>
+                                    <span>Web Developer</span>
+                                </div>
+                            </div>
+
+                            <h3>Modern Responsive Website</h3>
+
+                            <span class="card-category">Web Development</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.9</strong>
+                                <span>(128 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$80</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link"
+                                        data-name="Ali Raza">
+                                        Profile
+                                    </button>
+
+                                    <button class="view-btn service-link"
+                                        data-service="Modern Responsive Website">
+                                        Service
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Sara Ahmed"
+                        data-title="Professional Logo Design"
+                        data-category="Graphic Design"
+                        data-price="45"
+                        data-rating="4.8"
+                        data-skills="UI/UX Design">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=47" alt="Sara Ahmed">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=47" alt="Sara Ahmed">
+
+                                <div>
+                                    <h4>Sara Ahmed</h4>
+                                    <span>Graphic Designer</span>
+                                </div>
+                            </div>
+
+                            <h3>Professional Logo Design</h3>
+
+                            <span class="card-category">Graphic Design</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.8</strong>
+                                <span>(96 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$45</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Sara Ahmed">Profile</button>
+                                    <button class="view-btn service-link" data-service="Professional Logo Design">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Hamza Khan"
+                        data-title="Android & iOS Mobile App"
+                        data-category="Mobile Development"
+                        data-price="150"
+                        data-rating="5.0"
+                        data-skills="React JavaScript">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=68" alt="Hamza Khan">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=68" alt="Hamza Khan">
+
+                                <div>
+                                    <h4>Hamza Khan</h4>
+                                    <span>App Developer</span>
+                                </div>
+                            </div>
+
+                            <h3>Android & iOS Mobile App</h3>
+
+                            <span class="card-category">Mobile Development</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>5.0</strong>
+                                <span>(74 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$150</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Hamza Khan">Profile</button>
+                                    <button class="view-btn service-link" data-service="Android & iOS Mobile App">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Ayesha Malik"
+                        data-title="Data Analysis & Visualization"
+                        data-category="Data Analysis"
+                        data-price="95"
+                        data-rating="4.9"
+                        data-skills="Python Data Analysis">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=44" alt="Ayesha Malik">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=44" alt="Ayesha Malik">
+
+                                <div>
+                                    <h4>Ayesha Malik</h4>
+                                    <span>Data Analyst</span>
+                                </div>
+                            </div>
+
+                            <h3>Data Analysis & Visualization</h3>
+
+                            <span class="card-category">Data Analysis</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.9</strong>
+                                <span>(81 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$95</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Ayesha Malik">Profile</button>
+                                    <button class="view-btn service-link" data-service="Data Analysis & Visualization">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Usman Tariq"
+                        data-title="SEO & Digital Marketing"
+                        data-category="Digital Marketing"
+                        data-price="60"
+                        data-rating="4.7"
+                        data-skills="SEO Marketing">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=11" alt="Usman Tariq">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=11" alt="Usman Tariq">
+
+                                <div>
+                                    <h4>Usman Tariq</h4>
+                                    <span>Marketing Expert</span>
+                                </div>
+                            </div>
+
+                            <h3>SEO & Digital Marketing</h3>
+
+                            <span class="card-category">Digital Marketing</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.7</strong>
+                                <span>(65 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$60</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Usman Tariq">Profile</button>
+                                    <button class="view-btn service-link" data-service="SEO & Digital Marketing">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Zain Abbas"
+                        data-title="UI UX Website Design"
+                        data-category="Graphic Design"
+                        data-price="70"
+                        data-rating="4.8"
+                        data-skills="UI/UX Design">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=53" alt="Zain Abbas">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=53" alt="Zain Abbas">
+
+                                <div>
+                                    <h4>Zain Abbas</h4>
+                                    <span>UI/UX Designer</span>
+                                </div>
+                            </div>
+
+                            <h3>UI UX Website Design</h3>
+
+                            <span class="card-category">Graphic Design</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.8</strong>
+                                <span>(103 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$70</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Zain Abbas">Profile</button>
+                                    <button class="view-btn service-link" data-service="UI UX Website Design">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Bilal Ahmed"
+                        data-title="Python Web Application"
+                        data-category="Web Development"
+                        data-price="120"
+                        data-rating="4.9"
+                        data-skills="Python HTML CSS">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=60" alt="Bilal Ahmed">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=60" alt="Bilal Ahmed">
+
+                                <div>
+                                    <h4>Bilal Ahmed</h4>
+                                    <span>Python Developer</span>
+                                </div>
+                            </div>
+
+                            <h3>Python Web Application</h3>
+
+                            <span class="card-category">Web Development</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.9</strong>
+                                <span>(92 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$120</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Bilal Ahmed">Profile</button>
+                                    <button class="view-btn service-link" data-service="Python Web Application">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Maham Noor"
+                        data-title="Social Media Marketing"
+                        data-category="Digital Marketing"
+                        data-price="55"
+                        data-rating="4.6"
+                        data-skills="Marketing Social Media">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=49" alt="Maham Noor">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=49" alt="Maham Noor">
+
+                                <div>
+                                    <h4>Maham Noor</h4>
+                                    <span>Marketing Specialist</span>
+                                </div>
+                            </div>
+
+                            <h3>Social Media Marketing</h3>
+
+                            <span class="card-category">Digital Marketing</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.6</strong>
+                                <span>(57 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$55</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Maham Noor">Profile</button>
+                                    <button class="view-btn service-link" data-service="Social Media Marketing">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Hassan Ali"
+                        data-title="Business Dashboard"
+                        data-category="Data Analysis"
+                        data-price="110"
+                        data-rating="4.8"
+                        data-skills="Data Analysis">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=14" alt="Hassan Ali">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=14" alt="Hassan Ali">
+
+                                <div>
+                                    <h4>Hassan Ali</h4>
+                                    <span>Data Specialist</span>
+                                </div>
+                            </div>
+
+                            <h3>Business Dashboard</h3>
+
+                            <span class="card-category">Data Analysis</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.8</strong>
+                                <span>(69 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$110</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Hassan Ali">Profile</button>
+                                    <button class="view-btn service-link" data-service="Business Dashboard">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Fatima Khan"
+                        data-title="Creative Brand Identity"
+                        data-category="Graphic Design"
+                        data-price="90"
+                        data-rating="5.0"
+                        data-skills="UI/UX Design">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=32" alt="Fatima Khan">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=32" alt="Fatima Khan">
+
+                                <div>
+                                    <h4>Fatima Khan</h4>
+                                    <span>Brand Designer</span>
+                                </div>
+                            </div>
+
+                            <h3>Creative Brand Identity</h3>
+
+                            <span class="card-category">Graphic Design</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>5.0</strong>
+                                <span>(88 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$90</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Fatima Khan">Profile</button>
+                                    <button class="view-btn service-link" data-service="Creative Brand Identity">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Omar Shah"
+                        data-title="React Web Application"
+                        data-category="Web Development"
+                        data-price="135"
+                        data-rating="4.7"
+                        data-skills="React JavaScript">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=5" alt="Omar Shah">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="Omar Shah">
+
+                                <div>
+                                    <h4>Omar Shah</h4>
+                                    <span>Frontend Developer</span>
+                                </div>
+                            </div>
+
+                            <h3>React Web Application</h3>
+
+                            <span class="card-category">Web Development</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.7</strong>
+                                <span>(76 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$135</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Omar Shah">Profile</button>
+                                    <button class="view-btn service-link" data-service="React Web Application">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="market-card"
+                        data-name="Noor Fatima"
+                        data-title="Cross Platform Mobile App"
+                        data-category="Mobile Development"
+                        data-price="180"
+                        data-rating="4.9"
+                        data-skills="React JavaScript">
+
+                        <div class="card-image">
+                            <img src="https://i.pravatar.cc/400?img=25" alt="Noor Fatima">
+
+                            <button class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="freelancer-mini">
+                                <img src="https://i.pravatar.cc/100?img=25" alt="Noor Fatima">
+
+                                <div>
+                                    <h4>Noor Fatima</h4>
+                                    <span>Mobile Developer</span>
+                                </div>
+                            </div>
+
+                            <h3>Cross Platform Mobile App</h3>
+
+                            <span class="card-category">Mobile Development</span>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>4.9</strong>
+                                <span>(91 reviews)</span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div>
+                                    <small>Starting at</small>
+                                    <strong>$180</strong>
+                                </div>
+
+                                <div class="card-buttons">
+                                    <button class="view-btn profile-link" data-name="Noor Fatima">Profile</button>
+                                    <button class="view-btn service-link" data-service="Cross Platform Mobile App">Service</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="no-results" id="noResults">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>No services found</h3>
+                    <p>Try another search term, skill, or category.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<div class="modal" id="loginModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('loginModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p>Login to your Skillora account.</p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Login
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Don't have an account?
+            <button onclick="switchModal('loginModal','registerModal')">
+                Register
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="modal" id="registerModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('registerModal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p>Join the Skillora marketplace.</p>
+
+        <form id="registerForm">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="modal-submit">
+                Create Account
+            </button>
+        </form>
+
+        <p class="modal-switch">
+            Already have an account?
+            <button onclick="switchModal('registerModal','loginModal')">
+                Login
+            </button>
+        </p>
+
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success</span>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Ratings | Skillora</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="week5.css">
+    <link rel="stylesheet" href="week6.css">
+</head>
+<body>
+
+    <header class="w5-navbar">
+        <div class="w5-nav-inner">
+            <a href="index.html" class="w5-brand">Skillora<span>.</span></a>
+
+            <nav class="w5-nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Find Freelancers</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="orders.html">My Orders</a>
+                <a href="messages.html">Messages</a>
+                <a href="notifications.html">Notifications</a>
+                <a href="reviews.html" class="active">Reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="w6-container">
+        <section class="w6-page-heading">
+            <p class="w6-eyebrow">TRUST & FEEDBACK</p>
+            <h1>Reviews & Ratings</h1>
+            <p>Share your experience and help the Skillora community build trust.</p>
+        </section>
+
+        <section class="w6-review-layout">
+
+            <div class="w6-review-form-panel">
+                <h2>Write a Review</h2>
+                <p class="w6-review-description">
+                    Rate your experience and leave constructive feedback.
+                </p>
+
+                <form id="reviewForm">
+                    <div class="w6-form-group">
+                        <label for="reviewerName">Your Name</label>
+                        <input
+                            type="text"
+                            id="reviewerName"
+                            class="w6-input"
+                            placeholder="Enter your name"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+
+                    <div class="w6-form-group">
+                        <label for="reviewProject">Project or Service</label>
+                        <input
+                            type="text"
+                            id="reviewProject"
+                            class="w6-input"
+                            placeholder="Enter project or service name"
+                            maxlength="100"
+                            required
+                        >
+                    </div>
+
+                    <div class="w6-form-group">
+                        <span class="w6-form-label">Your Rating</span>
+
+                        <div class="w6-star-picker" id="starPicker" role="group"
+                             aria-label="Choose a rating from one to five stars">
+                            <button type="button" data-rating="1" aria-label="1 star">★</button>
+                            <button type="button" data-rating="2" aria-label="2 stars">★</button>
+                            <button type="button" data-rating="3" aria-label="3 stars">★</button>
+                            <button type="button" data-rating="4" aria-label="4 stars">★</button>
+                            <button type="button" data-rating="5" aria-label="5 stars">★</button>
+                        </div>
+
+                        <p id="ratingText" class="w6-rating-text">
+                            Select your rating
+                        </p>
+                    </div>
+
+                    <div class="w6-form-group">
+                        <label for="reviewComment">Your Review</label>
+                        <textarea
+                            id="reviewComment"
+                            class="w6-input w6-textarea"
+                            rows="5"
+                            maxlength="1000"
+                            placeholder="Describe your experience..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="w6-review-submit">
+                        Submit Review
+                    </button>
+
+                    <p id="reviewFeedback" class="w6-review-feedback"
+                       role="status" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <div class="w6-reviews-panel">
+                <div class="w6-reviews-heading">
+                    <div>
+                        <h2>Community Reviews</h2>
+                        <p>Feedback shared on Skillora</p>
+                    </div>
+                    <div class="w6-average-rating">
+                        <strong id="averageRating">0.0</strong>
+                        <span>★</span>
+                        <small id="reviewCount">0 reviews</small>
+                    </div>
+                </div>
+
+                <div id="reviewsList" class="w6-reviews-list"></div>
+
+                <div id="noReviews" class="w6-empty" hidden>
+                    <h3>No reviews yet</h3>
+                    <p>Be the first to share feedback.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="w5-footer">
+        <p>© <span id="currentYear"></span> Skillora. Freelance smarter. Build better.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="week6.js" defer></script>
+</body>
+</html>
